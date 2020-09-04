@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { Switch, Route } from "react-router-dom";
 
-function App() {
+import Home from "./pages/home/home.component.jsx";
+import SearchPage from "./pages/search-page/search-page.component.jsx";
+
+import { auth } from "./google/firebase.js";
+
+import { setCurrentUser } from "./redux/user/user.actions";
+
+import "./App.css";
+
+const App = ({ setCurrentUser }) => {
+  useEffect(() => {
+    const subscription = auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        const { displayName, email, photoURL } = userAuth;
+
+        setCurrentUser({
+          username: displayName,
+          email,
+          photoURL,
+        });
+      } else setCurrentUser(null);
+    });
+
+    return () => {
+      subscription();
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Switch>
+        <Route component={SearchPage} path="/search" />
+        <Route component={Home} path="/" />
+      </Switch>
     </div>
   );
-}
+};
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+});
 
-export default App;
+export default connect(null, mapDispatchToProps)(App);

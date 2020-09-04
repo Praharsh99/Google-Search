@@ -1,0 +1,117 @@
+.accountDropdown {
+  position: fixed;
+  top: 10%;
+  right: 1%;
+  width: 360px;
+  height: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+}
+
+.accountDropdown__hidden {
+  visibility: hidden;
+}
+
+.accountDropdown__accountInfo {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 0.2px solid #e8eaed;
+}
+
+.accountDropdown__noUser {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  line-height: 35px;
+  font-size: 12px;
+  color: #202124;
+  text-align: center;
+}
+
+.accountDropdown__noUser > h1 {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.accountDropdown__accountInfo > .MuiAvatar-root {
+  width: 80px;
+  height: 80px;
+}
+
+.accountDropdown__personalInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.accountDropdown__personalInfo span:first-child {
+  color: #202124;
+  margin-bottom: 4px;
+}
+
+.accountDropdown__personalInfo span:last-child {
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.accountDropdown__accountInfo a {
+  text-decoration: none;
+}
+
+.accountDropdown__accountInfo a:visited {
+  text-decoration: none;
+}
+
+.accountDropdown__accountInfo button {
+  text-transform: none;
+  font-size: 14px;
+  color: #3c4043;
+  padding: 5px 22px;
+  border-radius: 24px;
+  font-weight: 400;
+}
+
+.accountDropdown__accountButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  border-bottom: 0.2px solid #e8eaed;
+}
+
+.accountDropdown__accountButtons button {
+  text-transform: none;
+  font-size: 14px;
+  color: #3c4043;
+  padding: 6px 24px;
+  font-weight: 400;
+}
+
+.accountDropdown__accountTerms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  font-size: 12px;
+  color: #5f6368;
+}

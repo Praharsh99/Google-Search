@@ -1,0 +1,74 @@
+/* .search {
+} */
+
+.search__input {
+  height: 44px;
+  width: 60vw;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  max-width: 560px;
+}
+
+.search__input input {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: medium;
+  border: none;
+  outline: none;
+}
+
+.search_inputIcon {
+  color: #9aa0a6;
+}
+
+.search__buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__buttons button {
+  margin: 5px;
+  padding: 7px 20px;
+  background: #f8f8f8;
+  border: 1px solid #fff;
+  text-transform: inherit;
+  color: #5f6368;
+}
+
+.search__buttons button:hover {
+  border: 1px solid #c6c6c6;
+  background: linear-gradient(to top, #f8f8f8, #f1f1f1);
+  color: #222;
+}
+
+.search__buttonsHidden {
+  display: none !important;
+}
+
+.transcript__preview {
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  z-index: 110;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.transcript__preview > span {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  margin-left: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.search__microphoneCarrier {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,58 @@
+.speechModal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 110;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.speechModal__microphone {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: rgb(27, 27, 27);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: none;
+  outline: none;
+  transition: all 0.15s linear;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.speechModal__microphone::before {
+  content: "Press and hold the microphone to record your voice";
+  position: absolute;
+  top: calc(50% - 140px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.speechModal__microphone:hover::before {
+  visibility: visible;
+}
+
+.speechModal__microphone > .MuiSvgIcon-root {
+  font-size: 48px;
+  color: #fff;
+}
+
+.speechModal__microphone:active {
+  background: rgb(16, 204, 116);
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,56 @@
+.appsDropdown {
+  position: fixed;
+  top: 10%;
+  right: 2%;
+  width: 325px;
+  height: 580px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+}
+
+.appsDropdown__hidden {
+  visibility: hidden;
+}
+
+.appsDropdown__app {
+  width: 80px;
+  height: 90px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.2s linear;
+}
+
+.appsDropdown__app:hover {
+  background: #f6fafe;
+}
+
+.appsDropdown__app > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.appsDropdown__app > img {
+  width: 60px;
+  height: 60px;
+}
+
+.appsDrop__appName {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #000;
+}

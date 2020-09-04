@@ -1,0 +1,18 @@
+.searchPage__imageResults {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.searchPage__imageResult {
+  cursor: pointer;
+  width: 360px;
+  height: 240px;
+  margin: 10px;
+}
+
+.searchPage__imageResult > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
